@@ -1,9 +1,13 @@
 const express = require('express')
 const fs = require("fs")
 const path = require('path');
+const cors = require('cors');
+
 
 const app = express()
 const port = 80
+app.use(cors());
+
 
 const TelegramBot = require('node-telegram-bot-api'); // подключаем node-telegram-bot-api
 
