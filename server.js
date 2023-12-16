@@ -6,7 +6,6 @@ const cors = require('cors');
 
 const app = express()
 const port = 80
-app.use(cors());
 
 
 const TelegramBot = require('node-telegram-bot-api'); // подключаем node-telegram-bot-api
@@ -16,6 +15,7 @@ const bot = new TelegramBot('6843773214:AAEvSxIdqe2I-Tg1pifdLRlU-rCcy1t80gw', {p
 
 
 
+app.use(cors());
 
 app.use(express.urlencoded({ extended: true })); 
 app.use(express.json());
